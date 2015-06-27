@@ -1,0 +1,10 @@
+@employeeApp = angular
+    .module('app.employeeApp', [
+        'restangular'
+    ])
+    .config( (RestangularProvider) ->
+        RestangularProvider.setBaseUrl '/api'
+    )
+    .run(->
+        console.log 'employeeApp running'
+    )

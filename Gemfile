@@ -41,7 +41,18 @@ gem 'spring',        group: :development
 
 gem 'passenger'
 gem 'slim-rails'
+gem 'pg'
 
 # In order to get Angular to work with the Rails
 gem 'angular-rails-templates'
 gem 'bower-rails'
+gem 'active_model_serializers'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.1.0'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+end

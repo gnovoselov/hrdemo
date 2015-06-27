@@ -1,0 +1,17 @@
+div ng-app='app.employeeApp' ng-controller='EmployeeListCtrl'
+  table ng-if="employees"
+    thead
+      th Name
+      th Contacts
+      th Searching
+      th Salary
+    tbody
+      tr ng-repeat="employee in employees"
+        td
+          | {{employee.name}}
+        td
+          | {{employee.contacts}}
+        td
+          | {{employee.searching}}
+        td
+          | {{employee.salary | currency}}
