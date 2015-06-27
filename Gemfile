@@ -39,3 +39,9 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'passenger'
+gem 'slim-rails'
+
+# In order to get Angular to work with the Rails
+gem 'angular-rails-templates'
+gem 'bower-rails'

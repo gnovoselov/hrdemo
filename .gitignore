@@ -1,3 +1,5 @@
+*.pid
+*.pid.lock
 *.rbc
 capybara-*.html
 .rspec
