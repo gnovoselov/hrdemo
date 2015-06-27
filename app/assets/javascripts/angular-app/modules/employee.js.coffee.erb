@@ -1,6 +1,8 @@
 @employeeApp = angular
     .module('app.employeeApp', [
-        'restangular'
+        'restangular',
+        'ui.bootstrap'
+        'templates'
     ])
     .config( (RestangularProvider) ->
         RestangularProvider.setBaseUrl '/api'

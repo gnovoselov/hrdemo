@@ -17,6 +17,9 @@
 //= require lodash
 //= require restangular
 
+//= require angular-bootstrap
+//= require bootstrap-sprockets
+
 //= require angular-app/app
 //= require_tree ./angular-app/templates
 //= require_tree ./angular-app/modules

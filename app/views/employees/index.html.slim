@@ -1,5 +1,6 @@
-div ng-app='app.employeeApp' ng-controller='EmployeeListCtrl'
-  table ng-if="employees"
+.col-xs-8 ng-app='app.employeeApp' ng-controller='EmployeeListCtrl'
+  h1 Employees List
+  table.table.table-hover.table-striped ng-if="employees"
     thead
       th Name
       th Contacts
@@ -8,9 +9,10 @@ div ng-app='app.employeeApp' ng-controller='EmployeeListCtrl'
     tbody
       tr ng-repeat="employee in employees"
         td
-          | {{employee.name}}
+          a ng-click="editEmployee(employee)"
+            | {{employee.name}}
         td
-          | {{employee.contacts}}
+          | {{employee.contacts | empMaskContacts: 4}}
         td
           | {{employee.searching}}
         td

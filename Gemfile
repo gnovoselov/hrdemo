@@ -40,8 +40,9 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'passenger'
-gem 'slim-rails'
 gem 'pg'
+gem 'slim-rails'
+gem 'bootstrap-sass', '~> 3.3.0'
 
 # In order to get Angular to work with the Rails
 gem 'angular-rails-templates'
@@ -50,6 +51,7 @@ gem 'active_model_serializers'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.1.0'
+  gem 'jasmine-rails'
 end
 
 group :test do
