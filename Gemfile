@@ -17,7 +17,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# I chose not to use turbolinks. It's possible to use Angular with Rails and turbolinks, but the Angular app bootstrap process is more complex. I find that turbolinks and Angular serve the same purpose, which is to make the app respond faster. Adding turbolinks, in addition to Angular, adds a lot of complexity and not much benefit.
+# gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
