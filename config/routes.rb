@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
 
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
-  resources :employees, only: :index
+
+  resources :tags do
+    get :autocomplete_tag_name, :on => :collection
+  end
 
   namespace :api do
-    resources :employees, defaults: { format: :json }
+    resources :candidates, defaults: { format: :json }
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

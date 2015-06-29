@@ -12,12 +12,15 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
+//= require autocomplete-rails
 //= require angular
 //= require angular-rails-templates
 //= require lodash
 //= require restangular
 
 //= require angular-bootstrap
+//= require angular-route
 //= require bootstrap-sprockets
 
 //= require angular-app/app

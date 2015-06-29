@@ -1,7 +1,31 @@
 @hrdemoApp = angular
     .module('app.hrdemoApp', [
-        # additional dependencies here
+        'ngRoute',
+        'ui.bootstrap',
+        'templates',
+        'app.candidateApp'
+    ])
+    .config(['$routeProvider', ($routeProvider) ->
+        $routeProvider
+            .when('/', {
+                templateUrl: 'hrdemo/index.html'
+            })
+            .when('/vacancies', {
+                templateUrl: 'vacancies/index.html'
+            })
+            .when('/vacancies/new', {
+                templateUrl: 'vacancies/new.html'
+            })
+            .when('/candidates', {
+                templateUrl: 'candidates/index.html'
+            })
+            .when('/candidates/new', {
+                templateUrl: 'candidates/new.html'
+            })
+            .otherwise({
+                redirestTo: '/'
+            })
     ])
     .run(->
-        console.log 'hrdemoApp running'
+#        console.log 'hrdemoApp running'
     )

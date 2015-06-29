@@ -1,0 +1,12 @@
+@candidateApp = angular
+    .module('app.candidateApp', [
+        'restangular',
+        'ui.bootstrap',
+        'templates'
+    ])
+    .config( (RestangularProvider) ->
+        RestangularProvider.setBaseUrl '/api'
+    )
+    .run(->
+#        console.log 'candidateApp running'
+    )

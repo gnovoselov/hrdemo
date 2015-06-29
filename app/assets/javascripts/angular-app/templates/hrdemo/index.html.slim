@@ -1,0 +1,13 @@
+.jumbotron
+  .container
+    h1 = I18n.t :welcome
+    p
+      = I18n.t :hrdemo_description
+      | :
+    p
+      a.btn.btn-primary.btn-lg ng-href="#/vacancies" role="button"
+        => I18n.t :find_candidate
+      |&nbsp;
+      => I18n.t :or
+      a.btn.btn-primary.btn-lg ng-href="#/candidates" role="button"
+        => I18n.t :find_job

@@ -1,0 +1,52 @@
+form name="form.candidate" ng-submit="submitCandidate(candidate)" novalidate=""
+  .form-group
+    .row
+      .col-xs-12 ng-class="{error:form.candidate.name.$invalid && form.candidate.name.$dirty}"
+        label
+          = I18n.t :name
+          span.required *
+        input.form-control name="name" ng-model="candidate.name"
+        span.help-block ng-show="form.candidate.name.$invalid && form.candidate.name.$dirty"
+          | {{errorMessage('name')}}
+
+  .form-group
+    .row
+      .col-xs-12 ng-class="{error:form.candidate.contacts.$invalid && form.candidate.contacts.$dirty}"
+        label
+          = I18n.t :contacts
+          span.required *
+        input.form-control name="contacts" ng-model="candidate.contacts"
+        span.help-block ng-show="form.candidate.contacts.$invalid && form.candidate.contacts.$dirty"
+          | {{errorMessage('contacts')}}
+
+  .form-group
+    .row
+      .col-xs-12 ng-class="{error:form.candidate.salary.$invalid && form.candidate.salary.$dirty}"
+        label
+          = I18n.t :salary
+        input.form-control name="salary" ng-model="candidate.salary"
+        span.help-block ng-show="form.candidate.salary.$invalid && form.candidate.salary.$dirty"
+          | {{errorMessage('salary')}}
+
+  .form-group
+    .row
+      .col-xs-12 ng-class="{error:form.candidate.searching.$invalid && form.candidate.searching.$dirty}"
+        label
+          input type="checkbox" name="searching" ng-model="candidate.searching"
+          | &nbsp;
+          = I18n.t :searching
+        span.help-block ng-show="form.candidate.searching.$invalid && form.candidate.searching.$dirty"
+          | {{errorMessage('searching')}}
+
+  .form-group
+    .row
+      .col-xs-12 ng-class="{error:form.candidate.skill_list.$invalid && form.candidate.skill_list.$dirty}"
+        label
+          = I18n.t :skill_list
+        input.form-control data-autocomplete="/tags/autocomplete_tag_name" data-delimiter="," id="tag_name" multiple="multiple" name="skill_list" type="text" ng-model="candidate.skill_list" autocomplete="off"
+        span.help-block ng-show="form.candidate.skill_list.$invalid && form.candidate.skill_list.$dirty"
+          | {{errorMessage('skill_list')}}
+
+  .modal-footer
+    button.btn.btn-default type="button" data-dismiss="modal" ng-click="cancel()" Cancel
+    button.btn.btn-primary type="submit" Save Changes

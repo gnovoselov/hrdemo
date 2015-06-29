@@ -10,9 +10,38 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require jquery-ui
  *= require_tree .
  *= require_self
  */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.ui-front {
+  z-index: 10000;
+}
+
+form {
+  label {
+    span {
+      &.required {
+        color: #e31824;
+      }
+    }
+  }
+  input {
+    &.ng-invalid {
+      border-color: #e31824;
+    }
+  }
+  .error {
+    .help-block {
+      color: #e31824;
+    }
+  }
+}
+
+.centered {
+  text-align: center;
+}

@@ -1,4 +1,22 @@
-div ng-app='app.hrdemoApp' ng-controller='HrdemoCtrl'
-  p Value from HrdemoCtrl:
-  p
-  | {{ hrdemoValue }}
+.wrapper ng-app='app.hrdemoApp' ng-controller='HrdemoCtrl'
+  nav.navbar.navbar-default
+    .container-fluid
+      .navbar-header
+        button.navbar-toggle.collapsed type="button" data-toggle="collapse" data-tagret="bs-navbar-collapse" area-expanded="false"
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand ng-href="/"
+          = I18n.t :hr_demo
+      #bs-navbar-collapse.collapse.navbar-collapse
+        ul.nav.navbar-nav
+          li
+            a ng-href="#/vacancies" class="active"
+              = I18n.t :vacancies
+              span.sr-only
+                | (current)
+          li
+            a ng-href="#/candidates"
+              = I18n.t :candidates
+  .container-fluid ng-view=""

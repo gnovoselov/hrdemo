@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # I chose not to use turbolinks. It's possible to use Angular with Rails and turbolinks, but the Angular app bootstrap process is more complex. I find that turbolinks and Angular serve the same purpose, which is to make the app respond faster. Adding turbolinks, in addition to Angular, adds a lot of complexity and not much benefit.
 # gem 'turbolinks'
@@ -41,8 +42,11 @@ gem 'spring',        group: :development
 
 gem 'passenger'
 gem 'pg'
+gem 'i18n'
 gem 'slim-rails'
 gem 'bootstrap-sass', '~> 3.3.0'
+gem 'acts-as-taggable-on'
+gem 'rails-jquery-autocomplete'
 
 # In order to get Angular to work with the Rails
 gem 'angular-rails-templates'

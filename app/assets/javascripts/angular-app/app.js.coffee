@@ -1,6 +1,7 @@
 @app = angular.module('app', [
   # additional dependencies here, such as restangular
-  'templates'
+  'templates',
+  'app.hrdemoApp'
 ])
 
 # for compatibility with Rails CSRF protection
@@ -11,5 +12,5 @@
 ])
 
 @app.run(->
-  console.log 'angular app running'
+#  console.log 'angular app running'
 )

@@ -2,7 +2,7 @@
 #= require angular-mocks
 #= require sinon
 
-beforeEach(module('app', 'app.employeeApp'))
+beforeEach(module('app', 'app.candidateApp'))
 
 beforeEach inject (_$httpBackend_, _$compile_, $rootScope, $controller, $location, $injector, $timeout, $filter) ->
   @scope = $rootScope.$new()

@@ -1,0 +1,35 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        candidate:
+          attributes:
+            name:
+              invalid: Имя должно содержать 3 слова и только кириллические буквы и пробелы
+              blank: Имя не может быть пустым
+            contacts:
+              invalid: Контактная информация должна содержать номер телефона или адрес эл-почты
+              blank: Контактная информация не может быть пустой
+            salary:
+              not_a_number: Зарплата должна быть целым положительным числом
+  candidates: Кандидаты
+  candidates_list: Список кандидатов
+  create_candidate: Создать резюме
+  create_vacancy: Создать вакансию
+  compose_your_resume: Cоставить свое резюме
+  contacts: Контактная информация
+  edit_candidate: Редактировать резюме
+  edit_vacancy: Редактировать вакансию
+  find_candidate: Найти кандидата
+  find_job: Найти работу
+  hr_demo: HR demo
+  hrdemo_description: Вы хотите
+  name: Имя
+  no_entries_yet: Пока нет записей
+  or: или
+  review_resume_list: Просмотреть резюме
+  salary: Зарплата
+  searching: Поиск работы
+  skill_list: Умения
+  vacancies: Вакансии
+  welcome: Добро пожаловать

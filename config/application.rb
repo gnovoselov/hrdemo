@@ -20,6 +20,17 @@ module Hrdemo
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
+    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+    # config.i18n.default_locale = :de
+    config.i18n.enforce_available_locales = true
+    I18n.enforce_available_locales = true
+    config.i18n.default_locale = :ru
+    I18n.available_locales = [:en, :ru]
+
+    # Set timezone
+    config.time_zone = 'Europe/Moscow'
+
     # the path relative to app/assets/javascripts
     config.angular_templates.ignore_prefix  = 'angular-app/templates/'
   end
