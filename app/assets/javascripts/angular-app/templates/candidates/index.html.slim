@@ -13,10 +13,11 @@
         th = I18n.t :contacts
         th.centered = I18n.t :searching
         th = I18n.t :salary
+        th
       tbody
         tr ng-repeat="candidate in candidates"
           td
-            a ng-click="editCandidate(candidate)"
+            a ng-href="candidates/{{candidate.id}}"
               | {{candidate.name}}
           td
             | {{candidate.contacts}}
@@ -24,6 +25,12 @@
             | {{candidate.searching | booleanCheck }}
           td
             | {{candidate.salary | currency}}
+          td
+            a ng-click="editCandidate(candidate)"
+              span.glyphicon.glyphicon-pencil aria-hidden="true"
+            | &nbsp;
+            a ng-click="deleteCandidate(candidate)"
+              span.glyphicon.glyphicon-trash aria-hidden="true"
     .candidates_empty ng-hide="candidates.length"
       .panel.panel-default
         .panel-body

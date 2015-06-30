@@ -43,7 +43,7 @@ form name="form.candidate" ng-submit="submitCandidate(candidate)" novalidate=""
       .col-xs-12 ng-class="{error:form.candidate.skill_list.$invalid && form.candidate.skill_list.$dirty}"
         label
           = I18n.t :skill_list
-        input.form-control data-autocomplete="/tags/autocomplete_tag_name" data-delimiter="," id="tag_name" multiple="multiple" name="skill_list" type="text" ng-model="candidate.skill_list" autocomplete="off"
+        input.form-control data-autocomplete="/tags/autocomplete_tag_name" data-delimiter="," id="tag_name" multiple="multiple" name="skill_list" ng-model="candidate.skill_list" autocomplete="off"
         span.help-block ng-show="form.candidate.skill_list.$invalid && form.candidate.skill_list.$dirty"
           | {{errorMessage('skill_list')}}
 

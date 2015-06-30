@@ -17,6 +17,7 @@ angular.module('app.candidateApp').controller('CandidateFormModalCtrl', [
     $scope.submitCandidate = ->
       $($scope.form).find('input.ng-invalid').removeClass('ng-invalid')
       $($scope.form).find('.error').removeClass('error')
+      candidate.skill_list = $('#tag_name').val()
       if candidate.id > 0
         candidate.put().then (->
           $modalInstance.close('saved')
